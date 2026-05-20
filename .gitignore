@@ -11,6 +11,8 @@ __pycache__/
 .Python
 env/
 ENV/
+faiss_index/
+uploads/
 build/
 develop-eggs/
 dist/

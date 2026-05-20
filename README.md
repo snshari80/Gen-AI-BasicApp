@@ -1,4 +1,4 @@
-# AI Code Fixer
+# AI Assistant
 
 An intelligent web application that uses OpenAI's GPT-3.5-turbo to help users with code-related tasks. Whether you need to debug code, explain concepts, generate code, or have general conversations, AI Code Fixer provides an intuitive interface powered by advanced AI capabilities.
 
