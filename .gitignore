@@ -11,6 +11,8 @@ __pycache__/
 .Python
 env/
 ENV/
+images_cache/
+uploads_cache/
 faiss_index/
 uploads/
 build/
