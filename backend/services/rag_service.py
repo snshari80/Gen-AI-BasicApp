@@ -35,14 +35,14 @@ async def filechunk_embeddings(file, file_path):
         doc.metadata['file_name'] = file.filename
 
     
-    all_documents.extend(docs)
+    all_documents.append(docs)
 
-    image_docs = await image_embedding(file_path)
+    # image_docs = await image_embedding(file_path)
 
-    if image_docs:
-        all_documents.extend(image_docs)
+    # if image_docs:
+    #     all_documents.extend(image_docs)
 
-    split_docs = await text_splitter(all_documents)
+    split_docs = await text_splitter(docs)
 
     result = await embeddings_vector(split_docs)
     return result

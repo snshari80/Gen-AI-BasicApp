@@ -44,6 +44,10 @@ async def query_documents(req: QueryRequest):
         template="""Use the following pieces of context to answer the user's question. 
                     If you cannot find the answer in the context, say so clearly.
 
+                    Extract:
+                    - Quantity
+                    - Total Amount
+
                     Context:
                     {context}
 

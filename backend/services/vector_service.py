@@ -22,22 +22,21 @@ async def embeddings_vector(docs):
             vectorstore = FAISS.from_documents(
                 documents=docs,
                 embedding=embeddings_model,
-                metadata={"source": "file1.pdf"}
             )
 
         vectorstore.save_local(str(FAISS_INDEX_PATH))
 
         file_name = docs[0].metadata["file_name"]  
 
-        for doc in docs:
-            if doc.metadata.get("source_type") == "image_summary":
-                image_path = os.path.join(IMAGE_PATH, doc.metadata.get("image_name"))
-                chunk_removal_status = await remove_chunked_file(image_path)
+        # for doc in docs:
+        #     if doc.metadata.get("source_type") == "image_summary":
+        #         image_path = os.path.join(IMAGE_PATH, doc.metadata.get("image_name"))
+        #         chunk_removal_status = await remove_chunked_file(image_path)
 
         return {
             'file_name': file_name,
             "message": "File uploaded successfully & added to vector db",
-            "chunk_status":chunk_removal_status
+            # "chunk_status":chunk_removal_status
         }
     
     except Exception as e:
